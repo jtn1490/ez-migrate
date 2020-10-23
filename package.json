@@ -1,0 +1,24 @@
+{
+  "name": "ez-migrate",
+  "version": "0.0.14",
+  "description": "Easy CLI tool to orchestrate data migrations",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ez-generate": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "figlet": "^1.5.0",
+    "inquirer": "^7.3.3",
+    "minimist": "^1.2.5",
+    "mkdirp": "^1.0.4"
+  }
+}
