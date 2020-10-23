@@ -7,13 +7,13 @@ This is a database-agnostic data migration orchestration CLI tool.
 ## Installation
 
 ``` bash
-$ npm i ez-generate
+$ npm install -g ez-migrate
 ```
 
 ## Cli interface
 
 ```
-  Usage: ./node_modules/ez-migrate/index.js [options]
+  Usage: ez-migrate [options]
 
   Options:
 

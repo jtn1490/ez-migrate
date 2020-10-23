@@ -4,25 +4,25 @@ const chalk = require('chalk');
 const clear = require('clear');
 const fs = require('fs');
 const figlet = require('figlet');
-const { init } = require('./lib/init');
+const { init } = require('../lib/init');
 const { 
   recordMigration, 
   clearMigrations, 
   deleteMigrationRecord, 
   getExecutedMigrations 
-} = require('./lib/store');
+} = require('../lib/store');
 
 clear();
 
 console.log(
   chalk.yellow(
-    figlet.textSync('Generic Migrate', { horizontalLayout: 'full' })
+    figlet.textSync('EZ Migrate', { horizontalLayout: 'full' })
   )
 );
 
 const argv = require('minimist')(process.argv.slice(2));
 const [ action, arg1, arg2 ] = argv._;
-const dirBase = path.join(__dirname, "../../");
+const dirBase = process.cwd();
 let executedMigrations;
 
 switch (action) {
