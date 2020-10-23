@@ -23,15 +23,14 @@ console.log(
 const argv = require('minimist')(process.argv.slice(2));
 const [ action, arg1, arg2 ] = argv._;
 const dirBase = path.join(__dirname, "../../");
-
 let executedMigrations;
+
 switch (action) {
     case 'init':
         init();
         break;
 
     case 'run':
-      
       const { up } = require(`${dirBase}/migrations/${arg1}`);
       up();
       recordMigration(arg1);
