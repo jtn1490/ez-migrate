@@ -1,6 +1,6 @@
 {
   "name": "ez-migrate",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Easy CLI tool to orchestrate data migrations",
   "main": "./index.js",
   "scripts": {
