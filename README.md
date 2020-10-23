@@ -1,27 +1,14 @@
 # EZ Migrate
 
-This is a database-agnostic data migration orchestration CLI tool
+THIS PACKAGE IS STILL IN DEVELOPMENT SO USE AT YOUR OWN RISK!
+
+This is a database-agnostic data migration orchestration CLI tool.
 
 ## Installation
 
 ``` bash
 $ npm i ez-generate
 ```
-
-## Available Commands
-
-ez-generate init
-
-ez-generate run <migration_name>
-
-ez-generate down <migration_name>
-
-ez-generate reset-all
-
-ez-generate run-latest 
-
-ez-generate executed-migrations
-
 
 ## Cli interface
 
