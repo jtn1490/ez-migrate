@@ -19,8 +19,8 @@ $ npm install -g ez-migrate
 
     init                 Initializes migrations folder
     run [migration]      Runs migration [migration]
-    down [migration]     Reverts migration [migration]
-    reset-all            Reverts all executed migrations
+    revert [migration]   Reverts migration [migration]
+    revert-all           Reverts all executed migrations
     run-latest           Executes migrations that have not been run
     executed-migrations  List of executed migrations
 
@@ -31,7 +31,7 @@ const url = 'mongodb://localhost:27017/test';
 
 module.exports = {
     async up() {
-        const client = await MongoClient.connect(url, { useNewUrlParser: true });
+        const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
         if (!client) return;
 
         const db = client.db('test');
@@ -42,7 +42,7 @@ module.exports = {
     },
 
     async down() {
-        const client = await MongoClient.connect(url, { useNewUrlParser: true });
+        const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
         if (!client) return;
 
         const db = client.db('test');

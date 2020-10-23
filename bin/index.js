@@ -29,7 +29,7 @@ switch (action) {
     case 'init':
         init();
         break;
-
+        
     case 'run':
       const { up } = require(`${dirBase}/migrations/${arg1}`);
       up();
@@ -37,14 +37,14 @@ switch (action) {
       console.log(`===> Successfully ran migration ${arg1}`);
       break;
 
-    case 'down': 
+    case 'revert': 
       const { down } = require(`${dirBase}/migrations/${arg1}`);
       down();
       deleteMigrationRecord(arg1);
       console.log(`===> Successfully reverted migration ${arg1}`);
       break;
 
-    case 'reset-all':
+    case 'revert-all':
       fs.readdirSync(`${dirBase}/migrations`).forEach(file => {
         if (file !== 'migrations.config.json') {
           const { down } = require(`${dirBase}/migrations/${file}`);
@@ -74,7 +74,6 @@ switch (action) {
     case 'executed-migrations':
       executedMigrations = getExecutedMigrations();
       console.log('===> Executed migrations:');
-      
       executedMigrations.forEach(migration => {
         console.log('===> ', migration);
       });
